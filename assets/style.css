@@ -1,0 +1,21 @@
+h1 {
+	background-color: rgb(102, 102, 185);
+	text-align: center;
+}
+label {
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 25px;
+}
+.card {
+	margin: 20px;
+}
+.first-col,
+.second-col {
+	background-color: white;
+}
+
+
+.cardTodayDate {
+	font-size: 20px;
+}
