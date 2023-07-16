@@ -164,6 +164,17 @@ function getFiveDayForecast() {
 	});
 };
 
-getHistory();
-getWeatherToday();
+//local storage to preserve search history
+function initLoad() {
+
+	var cityListStorage = JSON.parse(localStorage.getItem('city'));
+
+	if (cityListStorage !== null) {
+		listOfCity = cityListStorage
+	}
+	getHistory();
+	getWeatherToday();
+};
+
+initLoad();
 
