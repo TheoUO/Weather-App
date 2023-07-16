@@ -16,7 +16,33 @@ $('.search').on("click", function (event) {
 
 	localStorage.setItem('city', JSON.stringify(listOfCity));
 	fiveForecastEl.empty();
+	getHistory();
+	
 });
 
+//list of buttons are created below the input form 
+var listCityEl = $('.list-city');
+function getHistory() {
+	listCityEl.empty();
 
+	for (let i = 0; i < listOfCity.length; i++) {
 
+		var rowEl = $('<row>');
+		var btnEl = $('<button>').text(`${listOfCity[i]}`)
+
+		rowEl.addClass('row');
+		btnEl.addClass('btn btn-outline-secondary listBtn');
+		btnEl.attr('type', 'button');
+
+		listCityEl.prepend(rowEl);
+		rowEl.append(btnEl);
+	} if (!city) {
+		return;
+	}
+	//clicking on the list of buttons allows a search of that content to start
+	$('.listBtn').on("click", function (event) {
+		event.preventDefault();
+		city = $(this).text();
+		fiveForecastEl.empty();
+	});
+};
