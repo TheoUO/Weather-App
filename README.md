@@ -17,7 +17,7 @@
 For this project, I create a daily planner where users can input their tasks for the day.
 
 
-![Site Langing Page](./Assets/Weather.png)
+![Site Langing Page](./assets/Weather.png)
 
 
 ## Usage 
